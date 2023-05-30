@@ -6,7 +6,7 @@ const app = express()
 const PORT = 5000
 
 app.get('/', (req, res)=>{
-    res.send('Hello from express');
+    res.sendFile(path.join(__dirname, './views/home', 'home.html'))
 })
 
 
