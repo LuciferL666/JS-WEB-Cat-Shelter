@@ -1,13 +1,17 @@
-const express = require('express')
-const path = require('path');
-
-const app = express()
+const http = require('http');
+const homeHtml = require('./views/home/index') 
 
 const PORT = 5000
 
-app.get('/', (req, res)=>{
-    res.sendFile(path.join(__dirname, './views/home', 'home.html'))
+const server = http.createServer(async (req, res) =>{
+
+    res.write()
+    res.end(homeHtml)
 })
+
+
+
+
 
 
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}...`));
